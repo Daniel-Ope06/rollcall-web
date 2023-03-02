@@ -20,4 +20,9 @@
       </svg>
       <h1 class="brand-name">RollCall</h1>
     </a>
+
+    <p>Second</p>
+    <p>Third</p>
+
+
 </nav>

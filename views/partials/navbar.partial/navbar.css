@@ -1,26 +1,31 @@
-nav {
+.navbar {
   width: 100%;
-  height: 128px;
+  height: 96px;
   background-color: #FFF;
   font-family: "IBM Plex Sans Condensed", sans-serif;
   color: #2F80ED;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100%;
+  align-items: center;
 }
-nav .logo-icon {
+.navbar .logo-icon {
   position: absolute;
-  top: 52px;
+  top: 35px;
   left: 32px;
-  transform: scale(0.25);
+  transform: scale(0.3);
   transform-origin: top left;
 }
-nav .brand-name {
+.navbar .brand-name {
   position: absolute;
   top: 23px;
-  left: 100px;
+  left: 90px;
   font-weight: 700;
   font-size: 64px;
   margin: 0;
   text-decoration: none;
   text-transform: uppercase;
+  color: #2F80ED;
 }
 
 /*# sourceMappingURL=navbar.css.map */
