@@ -1,31 +1,70 @@
 .navbar {
+  position: relative;
   width: 100%;
   height: 96px;
-  background-color: #FFF;
   font-family: "IBM Plex Sans Condensed", sans-serif;
-  color: #2F80ED;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 100%;
-  align-items: center;
+  background-color: #FFF;
+  border-bottom: solid 2px #1DA1F2;
+}
+.navbar .logo:hover g path {
+  fill: #0E71A7;
+}
+.navbar .logo:hover h1 {
+  color: #0E71A7;
 }
 .navbar .logo-icon {
   position: absolute;
-  top: 35px;
-  left: 32px;
-  transform: scale(0.3);
-  transform-origin: top left;
+  top: 33.33%;
+  left: 2.12%;
 }
 .navbar .brand-name {
   position: absolute;
-  top: 23px;
-  left: 90px;
-  font-weight: 700;
-  font-size: 64px;
+  top: 26%;
+  left: 4.56%;
   margin: 0;
+  font-weight: 700;
+  font-size: 36px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #2F80ED;
+  color: #1DA1F2;
+}
+.navbar .navbar-item {
+  position: absolute;
+  top: 34.38%;
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: none;
+  color: #2E2E2E;
+}
+.navbar .navbar-item:hover {
+  color: #0E71A7;
+}
+.navbar .item-1 {
+  left: 17.46%;
+}
+.navbar .item-2 {
+  left: 25.73%;
+}
+.navbar .item-3 {
+  top: 28.13%;
+  left: 66.67%;
+  font-size: 32px;
+}
+.navbar .item-4 {
+  top: 0;
+  left: 78.04%;
+  height: 100%;
+  width: 18.98%;
+  background-color: #1DA1F2;
+}
+.navbar .item-4 h2 {
+  font-weight: 400;
+  font-size: 32px;
+  color: #FFF;
+  text-align: center;
+}
+.navbar .item-4:hover {
+  background-color: #0E71A7;
 }
 
 /*# sourceMappingURL=navbar.css.map */

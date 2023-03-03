@@ -1,42 +1,87 @@
 $brand-white: #FFF;
-$brand-light-blue: #2F80ED;
-$brand-dark-blue: #003049;
-$brand-light-orange: #F2A541;
-$brand-dark-orange: #F08A4B;
+$brand-black: #2E2E2E;
+$brand-bright-blue: #1DA1F2;
+$brand-dark-blue: #0E71A7;
 $brand-font: 'IBM Plex Sans Condensed', sans-serif;
 
 .navbar{
+    position: relative;
     width: 100%;
     height: 96px;
-    background-color: $brand-white;
 
     font-family: $brand-font;
-    color: $brand-light-blue;
+    background-color: $brand-white;
+    border-bottom: solid 2px $brand-bright-blue;
 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 100%;
-    align-items: center;
+    .logo{
+        &:hover {
+            g{
+                path{
+                    fill: $brand-dark-blue;
+                }
+            }
+            h1{
+                color: $brand-dark-blue;
+            }
+        }
+    }
 
     .logo-icon{
         position: absolute;
-        top: 35px;
-        left: 32px;
-
-        transform: scale(0.3);
-        transform-origin: top left;
+        top: 33.33%;
+        left: 2.12%;
     }
 
     .brand-name{
         position: absolute;
-        top: 23px;
-        left: 90px;
+        top: 26%;
+        left: 4.56%;
+        margin: 0;
 
         font-weight: 700;
-        font-size: 64px;
-        margin: 0;
+        font-size: 36px;
         text-decoration: none;
         text-transform: uppercase;
-        color: $brand-light-blue;
+        color: $brand-bright-blue;
+    }
+
+    .navbar-item{
+        position: absolute;
+        top: 34.38%;
+
+        font-weight: 400;
+        font-size: 24px;
+        text-decoration: none;
+        color: $brand-black;
+
+        &:hover {
+            color: $brand-dark-blue;
+        }
+    }
+
+    .item-1{left: 17.46%}
+    .item-2{left: 25.73%}
+    .item-3{
+        top: 28.13%;
+        left: 66.67%;
+        font-size: 32px;
+    }
+    .item-4{
+        top: 0;
+        left: 78.04%;
+        height: 100%;
+        width: 18.98%;
+        background-color: $brand-bright-blue;
+
+        h2{
+            font-weight: 400;
+            font-size: 32px;
+            color: $brand-white;
+            text-align: center;
+        }
+
+        &:hover {
+            background-color: $brand-dark-blue;
+        }
     }
 }
