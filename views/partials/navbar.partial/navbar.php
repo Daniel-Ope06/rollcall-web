@@ -22,8 +22,32 @@
     <h1 class="brand-name">RollCall</h1>
   </a>
 
-  <a href="/" class="navbar-item item-1">Features</a>
-  <a href="/" class="navbar-item item-2">Resources</a>
-  <a href="/" class="navbar-item item-3">Log in</a>
-  <a href="/" class="navbar-item item-4"><h2>Get RollCall for free</h2></a>
+  <button class="navbar-toggler" type="button" aria-label="Hamburger Icon">
+    <svg id="hamburger-icon" width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="2.28571" rx="1.14286" fill="#1DA1F2"/>
+      <rect y="10.2857" width="32" height="2.28571" rx="1.14286" fill="#1DA1F2"/>
+      <rect y="20.5714" width="32" height="2.28571" rx="1.14286" fill="#1DA1F2"/>
+    </svg>
+
+    <svg id="close-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_158_161)">
+        <path d="M28.9144 1.60076L2.17293 28.3422C1.60489 28.9103 1.60489 29.8312 2.17293 30.3993C2.74096 30.9673 3.66193 30.9673 4.22997 30.3993L30.9715 3.65779C31.5395 3.08976 31.5395 2.16879 30.9715 1.60075C30.4034 1.03272 29.4825 1.03272 28.9144 1.60076Z" fill="#1DA1F2"/>
+        <path d="M30.9715 28.3422L4.23006 1.60074C3.66202 1.03271 2.74105 1.03271 2.17302 1.60074C1.60498 2.16878 1.60498 3.08974 2.17302 3.65778L28.9145 30.3993C29.4825 30.9673 30.4035 30.9673 30.9715 30.3993C31.5396 29.8312 31.5396 28.9103 30.9715 28.3422Z" fill="#1DA1F2"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_158_161">
+          <rect width="32" height="32" fill="white"/>
+        </clipPath>
+      </defs>
+    </svg>
+  </button>
+
+  <div class="navbar-collapse">
+    <a href="/" class="navbar-item item-1"><h2>Features</h2></a>
+    <a href="/" class="navbar-item item-2"><h2>Resources</h2></a>
+    <a href="/" class="navbar-item item-3"><h2>Log in</h2></a>
+    <a href="/" class="navbar-item item-4"><h2>Get RollCall for free</h2></a>
+  </div>
 </nav>
+
+<script src="views/partials/navbar.partial/navbar.js"></script>

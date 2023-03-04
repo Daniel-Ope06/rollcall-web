@@ -4,10 +4,15 @@ $brand-bright-blue: #1DA1F2;
 $brand-dark-blue: #0E71A7;
 $brand-font: 'IBM Plex Sans Condensed', sans-serif;
 
+$small-laptop-width: 1024px;
+$tablet-width: 950px;
+$mobile-width: 480px;
+
 .navbar{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 96px;
+    z-index: 9999;
 
     font-family: $brand-font;
     background-color: $brand-white;
@@ -45,14 +50,27 @@ $brand-font: 'IBM Plex Sans Condensed', sans-serif;
         color: $brand-bright-blue;
     }
 
+    .navbar-toggler{
+        background: transparent;
+        border: none;
+        display: none;
+
+        #close-icon{
+            display: none;
+        }
+    }
+
     .navbar-item{
         position: absolute;
         top: 34.38%;
-
-        font-weight: 400;
-        font-size: 24px;
         text-decoration: none;
-        color: $brand-black;
+
+        h2{
+            font-weight: 400;
+            font-size: 24px;
+            color: $brand-black;
+            margin: 0;
+        }
 
         &:hover {
             color: $brand-bright-blue;
@@ -64,7 +82,7 @@ $brand-font: 'IBM Plex Sans Condensed', sans-serif;
     .item-3{
         top: 28.13%;
         left: 66.67%;
-        font-size: 32px;
+        h2{font-size: 32px}
     }
     .item-4{
         top: 0;
@@ -74,6 +92,7 @@ $brand-font: 'IBM Plex Sans Condensed', sans-serif;
         background-color: $brand-bright-blue;
 
         h2{
+            padding-top: 28px;
             font-weight: 400;
             font-size: 32px;
             color: $brand-white;
@@ -82,6 +101,119 @@ $brand-font: 'IBM Plex Sans Condensed', sans-serif;
 
         &:hover {
             background-color: $brand-dark-blue;
+        }
+    }
+}
+
+
+// for 1024px laptop screens
+@media screen and (max-width: $small-laptop-width){
+    .navbar{
+        .logo-icon{
+            top: 33%;
+            left: 32px;
+        }
+        .brand-name{
+            left: 69px;
+        }
+        .item-1{left: 264px}
+        .item-2{left: 389px}
+        .item-3{left: 60%}
+        .item-4{
+            left: 70%;
+            width: 30%;
+        }
+    }
+}
+
+// for tablet screens
+@media screen and (max-width: $tablet-width){
+    .navbar{
+        height: 64px;
+
+        .logo-icon{
+            top: 16px;
+            left: 16px;
+        }
+        
+        .brand-name{
+            top: 10px;
+            left: 45px;
+        }
+
+        .navbar-toggler{
+            display: block;
+            position: absolute;
+            top: 21px;
+            right: 16px;
+
+            .hide-hamburger{
+                display: none;
+            }
+
+            #close-icon{
+                &.show-close{
+                    display: block;
+                }
+            }
+        }
+
+        .navbar-collapse{
+            position: fixed;
+            bottom: -100%;
+            opacity: 0%;
+            transition: all 0.3s ease;
+
+            width: 100vw;
+            height: calc(100vh - 64px);
+            background-color: $brand-white;
+
+            &.open{
+                bottom: 0;
+                opacity: 100%;
+            }
+        }
+
+        .navbar-item{
+            left: 16px;
+            height: calc(100vh/12);
+            width: calc(100vw - 32px);
+            padding-top: calc(100vh/18);
+            border-top: solid 1px $brand-bright-blue;
+        }
+
+        .item-1{top: 0}
+        .item-2{
+            top: calc(100vh/12 + 100vh/18);
+            border-bottom: solid 1px $brand-bright-blue;
+        }
+        .item-3{
+            top: calc(100vh/6 + 100vh/6);
+            height: calc(100vh/12);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            border: solid 2px $brand-bright-blue;
+
+            h2{
+                font-weight: 400;
+                text-align: center;
+                color: $brand-bright-blue;
+            }
+        }
+        .item-4{
+            top: calc(100vh/4 + 500vh/18);
+            height: calc(100vh/12);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+
+            h2{
+                font-weight: 400;
+                text-align: center;
+                color: $brand-white;
+                padding-top: 0;
+            }
         }
     }
 }
