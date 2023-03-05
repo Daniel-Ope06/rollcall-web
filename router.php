@@ -1,7 +1,7 @@
 <?php
 
 $routes = [
-    "/" => "controllers/home.php",
+    "/" => "controllers/landing-page.php",
 ];
 
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
