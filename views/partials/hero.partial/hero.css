@@ -1,0 +1,106 @@
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 96px);
+}
+.hero-section .hero-section-bg {
+  width: 100vw;
+  height: calc(100vh - 96px);
+}
+.hero-section .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 96px);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  color: #FFF;
+}
+.hero-section .hero-content .tagline {
+  width: 70%;
+  height: 250px;
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 125px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero-section .hero-content .tagline span {
+  color: #1DA1F2;
+}
+.hero-section .hero-content .smaller-tagline {
+  height: 42px;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 42px;
+}
+.hero-section .hero-content .white-rectangle {
+  width: 46.1%;
+  height: 86px;
+  background-color: #FFF;
+  border-radius: 45px;
+  margin-top: 110px;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 65% 33.2%;
+  grid-template-rows: auto;
+}
+.hero-section .hero-content .white-rectangle #email {
+  height: 70%;
+  width: 80%;
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  color: #2E2E2E;
+}
+.hero-section .hero-content .white-rectangle #email::placeholder {
+  color: #2E2E2E;
+  opacity: 0.7;
+}
+.hero-section .hero-content .white-rectangle #email:focus {
+  border: none !important;
+  outline: none;
+}
+.hero-section .hero-content .white-rectangle #get-started {
+  background-color: #1DA1F2;
+  border-radius: 40px;
+  border: none;
+  height: 80%;
+  width: 100%;
+  font-size: 32px;
+  color: #FFF;
+}
+.hero-section .hero-content .white-rectangle #get-started:hover {
+  background-color: #0E71A7;
+}
+
+@media screen and (max-width: 950px) {
+  .hero-section {
+    height: calc(100vh - 64px);
+  }
+  .hero-section .hero-section-bg {
+    height: calc(100vh - 64px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-section {
+    height: 106.7vw;
+  }
+  .hero-section .hero-section-bg {
+    height: 106.7vw;
+  }
+}
+
+/*# sourceMappingURL=hero.css.map */
