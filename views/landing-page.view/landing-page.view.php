@@ -8,6 +8,7 @@
     </head>
 
     <body>
-        <?php require "partials/navbar.partial/navbar.php"; ?>
+        <?php require "./views/partials/navbar.partial/navbar.php"; ?>
+        <?php require "./views/partials/hero.partial/hero.php"; ?>
     </body>
 </html>
