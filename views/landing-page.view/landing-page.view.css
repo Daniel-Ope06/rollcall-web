@@ -1,0 +1,12 @@
+.hero-container {
+  position: absolute;
+  top: 96px;
+}
+
+@media screen and (max-width: 950px) {
+  .hero-container {
+    top: 64px;
+  }
+}
+
+/*# sourceMappingURL=landing-page.view.css.map */

@@ -1,0 +1,13 @@
+$tablet-width: 950px;
+
+.hero-container{
+    position: absolute;
+    top: 96px;
+}
+
+// for tablet screens
+@media screen and (max-width: $tablet-width){
+    .hero-container{
+        top: 64px;
+    }
+}
