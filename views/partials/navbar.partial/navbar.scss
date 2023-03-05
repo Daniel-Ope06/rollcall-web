@@ -70,10 +70,10 @@ $mobile-width: 480px;
             font-size: 24px;
             color: $brand-black;
             margin: 0;
-        }
 
-        &:hover {
-            color: $brand-bright-blue;
+            &:hover {
+                color: $brand-bright-blue;
+            }
         }
     }
 
@@ -97,6 +97,10 @@ $mobile-width: 480px;
             font-size: 32px;
             color: $brand-white;
             text-align: center;
+
+            &:hover {
+                color: $brand-white;
+            }
         }
 
         &:hover {

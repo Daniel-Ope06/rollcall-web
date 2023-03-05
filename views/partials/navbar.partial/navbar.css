@@ -48,7 +48,7 @@
   color: #2E2E2E;
   margin: 0;
 }
-.navbar .navbar-item:hover {
+.navbar .navbar-item h2:hover {
   color: #1DA1F2;
 }
 .navbar .item-1 {
@@ -77,6 +77,9 @@
   font-size: 32px;
   color: #FFF;
   text-align: center;
+}
+.navbar .item-4 h2:hover {
+  color: #FFF;
 }
 .navbar .item-4:hover {
   background-color: #0E71A7;
