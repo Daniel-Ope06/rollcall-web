@@ -86,12 +86,38 @@
   background-color: #0E71A7;
 }
 
+@media screen and (max-width: 1024px) {
+  .hero-section .hero-content .tagline {
+    font-size: 66px;
+    line-height: 75px;
+    height: 25vh;
+  }
+  .hero-section .hero-content .white-rectangle {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 950px) {
   .hero-section {
     height: calc(100vh - 64px);
   }
   .hero-section .hero-section-bg {
     height: calc(100vh - 64px);
+  }
+  .hero-section .hero-content .tagline {
+    font-size: 46px;
+  }
+  .hero-section .hero-content .smaller-tagline {
+    width: 70%;
+    font-size: 24px;
+  }
+  .hero-section .hero-content .white-rectangle {
+    height: 66px;
+  }
+  .hero-section .hero-content .white-rectangle #email {
+    font-size: 24px;
+  }
+  .hero-section .hero-content .white-rectangle #get-started {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -100,6 +126,28 @@
   }
   .hero-section .hero-section-bg {
     height: 106.7vw;
+  }
+  .hero-section .hero-content .tagline {
+    font-size: 24px;
+    line-height: 40px;
+    height: 26.675vw;
+    width: 90%;
+    margin-top: 150px;
+  }
+  .hero-section .hero-content .smaller-tagline {
+    width: 90%;
+    font-size: 16px;
+  }
+  .hero-section .hero-content .white-rectangle {
+    width: 90%;
+    height: 48px;
+    margin-top: 50px;
+  }
+  .hero-section .hero-content .white-rectangle #email {
+    font-size: 16px;
+  }
+  .hero-section .hero-content .white-rectangle #get-started {
+    font-size: 16px;
   }
 }
 

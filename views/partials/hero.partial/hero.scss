@@ -4,6 +4,7 @@ $brand-bright-blue: #1DA1F2;
 $brand-dark-blue: #0E71A7;
 $brand-font: 'IBM Plex Sans Condensed', sans-serif;
 
+$small-laptop-width: 1024px;
 $tablet-width: 950px;
 $mobile-width: 480px;
 
@@ -11,12 +12,6 @@ $mobile-width: 480px;
     position: relative;
     width: 100vw;
     height: calc(100vh - 96px);
-
-    //background: linear-gradient(0deg, rgba(14, 113, 167, 0.15), rgba(14, 113, 167, 0.15)), url(/assets/images/hero-section-bg.png);
-    //background-repeat: no-repeat;
-    //background-size: contain;
-    //background-size: 100%;
-
 
     .hero-section-bg{
         width: 100vw;
@@ -119,6 +114,22 @@ $mobile-width: 480px;
     }
 }
 
+// for 1024px laptop screens
+@media screen and (max-width: $small-laptop-width){
+    .hero-section{
+        .hero-content{
+            .tagline{
+                font-size: 66px;
+                line-height: 75px;
+                height: calc(100vh/4);
+            }
+
+            .white-rectangle{
+                width: 70%;
+            }
+        }
+    }
+}
 
 // for tablet screens
 @media screen and (max-width: $tablet-width){
@@ -128,6 +139,24 @@ $mobile-width: 480px;
         .hero-section-bg{
             height: calc(100vh - 64px);
         }
+
+        .hero-content{
+            .tagline{
+                font-size: 46px;
+            }
+
+            .smaller-tagline{
+                width: 70%;
+                font-size: 24px;
+            }
+
+            .white-rectangle{
+                height: 66px;
+                #email{font-size: 24px;}
+                #get-started{font-size: 24px;}
+            }
+        }
+        
     }
 }
 
@@ -138,6 +167,29 @@ $mobile-width: 480px;
 
         .hero-section-bg{
             height: calc(1.067 * 100vw);
+        }
+
+        .hero-content{
+            .tagline{
+                font-size: 24px;
+                line-height: 40px;
+                height: calc(1.067 * 100vw/4);
+                width: 90%;
+                margin-top: 150px;
+            }
+
+            .smaller-tagline{
+                width: 90%;
+                font-size: 16px;
+            }
+
+            .white-rectangle{
+                width: 90%;
+                height: 48px;
+                margin-top: 50px;
+                #email{font-size: 16px;}
+                #get-started{font-size: 16px;}
+            }
         }
     }
 }
