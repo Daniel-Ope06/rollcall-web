@@ -2,6 +2,7 @@
 
 $routes = [
     "/" => "controllers/landing-page.php",
+    "/sign-up" => "controllers/sign-up.php",
 ];
 
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
