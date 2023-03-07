@@ -24,7 +24,7 @@
         </a>
 
         <h2>Create an account</h2>
-        <a href="/">or login</a>
+        <a href="/sign-in">or login</a>
 
         <form>
             <div class="input-field">
