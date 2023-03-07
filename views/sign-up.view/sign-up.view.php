@@ -1,6 +1,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./views/sign-up.view/sign-up.view.css">
-    <title>RollCall-Sign Up</title>
+    <title>Sign up | RollCall</title>
 </head>
 
 <body>

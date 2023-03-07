@@ -1,7 +1,7 @@
 body {
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0;
   font-family: "IBM Plex Sans Condensed", sans-serif;
 }
@@ -103,6 +103,22 @@ body {
 }
 .sign-up-container form button:hover {
   background-color: #0E71A7;
+}
+
+@media screen and (max-width: 1024px) {
+  .sign-up-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .sign-up-container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sign-up-container {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=sign-up.view.css.map */

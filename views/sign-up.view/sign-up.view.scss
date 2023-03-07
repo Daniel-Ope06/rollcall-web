@@ -10,9 +10,10 @@ $mobile-width: 480px;
 
 
 body{
+    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
     margin: 0;
     font-family: $brand-font;
 }
@@ -141,3 +142,27 @@ body{
         }
     }
 }
+
+
+// for 1024px laptop screens
+@media screen and (max-width: $small-laptop-width){
+    .sign-up-container{
+        width: 50%;
+    }
+}
+
+// for tablet screens
+@media screen and (max-width: $tablet-width){
+    .sign-up-container{
+        width: 70%;
+    }
+}
+
+// for mobile screens
+@media screen and (max-width: $mobile-width){
+    .sign-up-container{
+        width: 90%;
+    }
+}
+
+
