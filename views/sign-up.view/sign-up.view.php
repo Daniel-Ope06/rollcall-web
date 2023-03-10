@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="./views/sign-up.view/sign-up.view.css">
+    <link rel="stylesheet" type="text/css" href="views/sign-up.view/sign-up.view.css">
     <title>Sign up | RollCall</title>
 </head>
 
@@ -28,7 +28,7 @@
 
         <form>
             <div class="input-field">
-                <input type="email" name="email" placeholder="name@school.edu.ng" required>
+                <input type="email" name="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="name@school.edu.ng" required>
             </div>
             <div class="input-field">
                 <input type="text" name="username" placeholder="username" required>
