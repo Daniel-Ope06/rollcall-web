@@ -1,5 +1,4 @@
 <?php
-
 $routes = [
     "/" => "controllers/landing-page.php",
     "/sign-up" => "controllers/sign-up.php",
@@ -19,3 +18,5 @@ function routeToController($uri, $routes) {
         die();
     }
 }
+
+?>
