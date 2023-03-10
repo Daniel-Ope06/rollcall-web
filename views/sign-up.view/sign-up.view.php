@@ -26,7 +26,7 @@
         <h2>Create an account</h2>
         <a href="/sign-in">or login</a>
 
-        <form>
+        <form action="/dashboard"  method="POST">
             <div class="input-field">
                 <input type="email" name="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="name@school.edu.ng" required>
             </div>
@@ -36,7 +36,7 @@
             <div class="input-field">
                 <input type="password" name="password" placeholder="password" required>
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" name="submit" value="sign-up-submit">Sign Up</button>
         </form>
 
     </section>
