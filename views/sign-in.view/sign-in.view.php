@@ -26,14 +26,14 @@
         <h2>Login</h2>
         <a href="/sign-up">or create an account</a>
 
-        <form>
+        <form action="/dashboard"  method="POST">
             <div class="input-field">
                 <input type="email" name="email" placeholder="name@school.edu.ng" required>
             </div>
             <div class="input-field">
                 <input type="password" name="password" placeholder="password" required>
             </div>
-            <button type="submit">Sign In</button>
+            <button type="submit" name="submit" value="sign-in-submit">Sign In</button>
         </form>
 
     </section>
