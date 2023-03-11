@@ -8,11 +8,118 @@ $small-laptop-width: 1024px;
 $tablet-width: 950px;
 $mobile-width: 480px;
 
+
+body{
+    font-family: $brand-font;
+}
+
 .header-bg{
     height: 224px;
     background-color: $brand-dark-blue;
     border-radius: 0px 0px 0px 130px;
 }
+
+.logo{
+    .logo-icon{
+        position: absolute;
+        top: 87px;
+        left: 41.4%;
+    }
+
+    .brand-name{
+        position: absolute;
+        top: 50px;
+        left: 44.84%;
+        display: inline;
+
+        font-size: 48px;
+        font-weight: 700;
+        color: $brand-white;
+        text-transform: uppercase;
+    }
+}
+
+.upcoming-section{
+    position: absolute;
+    top: 112px;
+    left: 8.5%;
+    z-index: 2;
+
+    h1{
+        color: $brand-white;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .card-row{
+        position: absolute;
+        top: 70px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 55px;
+
+        .card{
+            position: relative;
+            width: 379px;
+            height: 172px;
+            background-color: $brand-white;
+            border-radius: 10px;
+            box-shadow: 0px 7px 7px rgba(46, 46, 46, 0.25);
+
+            .date-time{
+                position: absolute;
+                left: 16px;
+                top: 16px;
+
+                h3{
+                    display: inline;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $brand-black;
+                    opacity: 0.7;
+                }
+            }
+
+            .circle{
+                position: absolute;
+                left: 317px;
+                top: 16px;
+
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                background-color: $brand-black;
+            }
+
+            .course-name{
+                position: absolute;
+                left: 16px;
+                top: 16px;
+
+                font-size: 32px;
+                font-weight: 400;
+                color: $brand-dark-blue;
+            }
+
+            .course-descriptionn{
+                position: absolute;
+                left: 16px;
+                top: 70px;
+                width: 90%;
+
+                font-size: 16px;
+                font-weight: 400;
+                color: $brand-black;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+
 
 
 

@@ -1,7 +1,94 @@
+body {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
 .header-bg {
   height: 224px;
   background-color: #0E71A7;
   border-radius: 0px 0px 0px 130px;
+}
+
+.logo .logo-icon {
+  position: absolute;
+  top: 87px;
+  left: 41.4%;
+}
+.logo .brand-name {
+  position: absolute;
+  top: 50px;
+  left: 44.84%;
+  display: inline;
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.upcoming-section {
+  position: absolute;
+  top: 112px;
+  left: 8.5%;
+  z-index: 2;
+}
+.upcoming-section h1 {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+}
+.upcoming-section .card-row {
+  position: absolute;
+  top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+}
+.upcoming-section .card-row .card {
+  position: relative;
+  width: 379px;
+  height: 172px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 7px 7px rgba(46, 46, 46, 0.25);
+}
+.upcoming-section .card-row .card .date-time {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.upcoming-section .card-row .card .date-time h3 {
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2E2E2E;
+  opacity: 0.7;
+}
+.upcoming-section .card-row .card .circle {
+  position: absolute;
+  left: 317px;
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #2E2E2E;
+}
+.upcoming-section .card-row .card .course-name {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #0E71A7;
+}
+.upcoming-section .card-row .card .course-descriptionn {
+  position: absolute;
+  left: 16px;
+  top: 70px;
+  width: 90%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2E2E2E;
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=dashboard.view.css.map */
