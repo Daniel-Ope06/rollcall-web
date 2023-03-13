@@ -11,10 +11,12 @@ $mobile-width: 480px;
 
 body{
     font-family: $brand-font;
+    width: 100%;
 }
 
 .header-bg{
     height: 224px;
+    width: 100%;
     background-color: $brand-dark-blue;
     border-radius: 0px 0px 0px 130px;
 }
@@ -22,13 +24,13 @@ body{
 .logo{
     .logo-icon{
         position: absolute;
-        top: 87px;
+        top: 57px;
         left: 41.4%;
     }
 
     .brand-name{
         position: absolute;
-        top: 50px;
+        top: 20px;
         left: 44.84%;
         display: inline;
 
@@ -51,13 +53,13 @@ body{
         font-weight: 400;
     }
 
-    .card-row{
-        position: absolute;
+    .card-grid{
+       position: absolute;
         top: 70px;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 55px;
+        gap: 55px; 
 
         .card{
             position: relative;
@@ -117,6 +119,77 @@ body{
             }
         }
     }
+}
+
+.courses-section{
+    position: relative;
+    top: 200px;
+    left: 39%;
+    z-index: 2;
+
+    width: 810px;
+    height: 250px;
+
+    background-color: $brand-white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 7px 4px rgba(46, 46, 46, 0.25);
+
+    h1{
+        position: absolute;
+        left: 16px;
+        top: 16px;
+
+        font-size: 32px;
+        font-weight: 400;
+        color: $brand-dark-blue;
+        margin-top: 0;
+    }
+
+    .card-grid{
+        position: absolute;
+        top: 80px;
+        left: 16px;
+        width: 768px;
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, 145px);
+        gap: 20px;
+        overflow-x: scroll;
+
+        .card{
+            position: relative;
+            width: 145px;
+            height: 145px;
+            background-color: $brand-dark-blue;
+            border-radius: 10px;
+
+            .circle{
+                position: absolute;
+                right: 16px;
+                top: 16px;
+
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                background-color: $brand-black;
+            }
+
+            .course-name{
+                position: absolute;
+                left: 16px;
+                bottom: 0px;
+
+                font-size: 24px;
+                font-weight: 400;
+                color: $brand-white;
+            }
+        }
+    }
+
+
 }
 
 
