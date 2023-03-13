@@ -9,3 +9,5 @@ function dd($value) {
     echo "</pre>";
     die();
 }
+
+?>
