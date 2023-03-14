@@ -29,7 +29,7 @@ body {
 .upcoming-section {
   position: absolute;
   top: 112px;
-  left: 8.5%;
+  left: 128px;
   z-index: 2;
 }
 .upcoming-section h1 {
@@ -93,10 +93,8 @@ body {
   opacity: 0.7;
 }
 
-.courses-section {
+.courses-enrolled-section {
   position: relative;
-  top: 200px;
-  left: 39%;
   z-index: 2;
   width: 810px;
   height: 250px;
@@ -104,7 +102,7 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 7px 4px rgba(46, 46, 46, 0.25);
 }
-.courses-section h1 {
+.courses-enrolled-section h1 {
   position: absolute;
   left: 16px;
   top: 16px;
@@ -113,7 +111,7 @@ body {
   color: #0E71A7;
   margin-top: 0;
 }
-.courses-section .card-grid {
+.courses-enrolled-section .card-grid {
   position: absolute;
   top: 80px;
   left: 16px;
@@ -124,14 +122,14 @@ body {
   gap: 20px;
   overflow-x: scroll;
 }
-.courses-section .card-grid .card {
+.courses-enrolled-section .card-grid .card {
   position: relative;
   width: 145px;
   height: 145px;
   background-color: #0E71A7;
   border-radius: 10px;
 }
-.courses-section .card-grid .card .circle {
+.courses-enrolled-section .card-grid .card .circle {
   position: absolute;
   right: 16px;
   top: 16px;
@@ -141,13 +139,153 @@ body {
   overflow: hidden;
   background-color: #2E2E2E;
 }
-.courses-section .card-grid .card .course-name {
+.courses-enrolled-section .card-grid .card .course-name {
   position: absolute;
   left: 16px;
   bottom: 0px;
   font-size: 24px;
   font-weight: 400;
   color: #FFF;
+}
+
+.courses-instructed-section {
+  position: relative;
+  z-index: 2;
+  width: 810px;
+  height: 250px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 7px 4px rgba(46, 46, 46, 0.25);
+}
+.courses-instructed-section h1 {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #0E71A7;
+  margin-top: 0;
+}
+.courses-instructed-section .card-grid {
+  position: absolute;
+  top: 80px;
+  left: 16px;
+  width: 768px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, 145px);
+  gap: 20px;
+  overflow-x: scroll;
+}
+.courses-instructed-section .card-grid .card {
+  position: relative;
+  width: 145px;
+  height: 145px;
+  background-color: #0E71A7;
+  border-radius: 10px;
+}
+.courses-instructed-section .card-grid .card .circle {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #2E2E2E;
+}
+.courses-instructed-section .card-grid .card .course-name {
+  position: absolute;
+  left: 16px;
+  bottom: 0px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.calendar-section {
+  position: relative;
+  z-index: 2;
+  width: 379px;
+  height: 520px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 7px 4px rgba(46, 46, 46, 0.25);
+}
+.calendar-section h1 {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #0E71A7;
+  margin-top: 0;
+}
+.calendar-section .card-grid {
+  position: absolute;
+  top: 80px;
+  left: 16px;
+  height: 430px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(auto-fit, 83px);
+  gap: 20px;
+  overflow-y: scroll;
+}
+.calendar-section .card-grid .card {
+  position: relative;
+  width: 324px;
+  height: 83px;
+  background-color: #0E71A7;
+  border-radius: 10px;
+}
+.calendar-section .card-grid .card .circle {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #2E2E2E;
+}
+.calendar-section .card-grid .card .course-name {
+  position: absolute;
+  left: 80px;
+  top: 16px;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFF;
+}
+.calendar-section .card-grid .card .date-time {
+  position: absolute;
+  left: 80px;
+  bottom: 12px;
+}
+.calendar-section .card-grid .card .date-time h3 {
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: 379px 820px;
+  grid-template-rows: 550px;
+  gap: 20px;
+  width: min-content;
+  margin-bottom: 20px;
+  position: relative;
+  top: 175px;
+  left: 128px;
+}
+
+.section2 {
+  display: grid;
+  grid-template-rows: 250px 250px;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=dashboard.view.css.map */

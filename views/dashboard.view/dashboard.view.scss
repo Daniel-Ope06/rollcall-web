@@ -41,10 +41,12 @@ body{
     }
 }
 
+
+
 .upcoming-section{
     position: absolute;
     top: 112px;
-    left: 8.5%;
+    left: 128px;
     z-index: 2;
 
     h1{
@@ -121,10 +123,10 @@ body{
     }
 }
 
-.courses-section{
+
+
+.courses-enrolled-section{
     position: relative;
-    top: 200px;
-    left: 39%;
     z-index: 2;
 
     width: 810px;
@@ -188,12 +190,175 @@ body{
             }
         }
     }
-
-
 }
 
 
+.courses-instructed-section{
+    position: relative;
+    z-index: 2;
+
+    width: 810px;
+    height: 250px;
+
+    background-color: $brand-white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 7px 4px rgba(46, 46, 46, 0.25);
+
+    h1{
+        position: absolute;
+        left: 16px;
+        top: 16px;
+
+        font-size: 32px;
+        font-weight: 400;
+        color: $brand-dark-blue;
+        margin-top: 0;
+    }
+
+    .card-grid{
+        position: absolute;
+        top: 80px;
+        left: 16px;
+        width: 768px;
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, 145px);
+        gap: 20px;
+        overflow-x: scroll;
+
+        .card{
+            position: relative;
+            width: 145px;
+            height: 145px;
+            background-color: $brand-dark-blue;
+            border-radius: 10px;
+
+            .circle{
+                position: absolute;
+                right: 16px;
+                top: 16px;
+
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                background-color: $brand-black;
+            }
+
+            .course-name{
+                position: absolute;
+                left: 16px;
+                bottom: 0px;
+
+                font-size: 24px;
+                font-weight: 400;
+                color: $brand-white;
+            }
+        }
+    }
+}
 
 
+.calendar-section{
+    position: relative;
+    z-index: 2;
 
+    width: 379px;
+    height: 520px;
+
+    background-color: $brand-white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 7px 4px rgba(46, 46, 46, 0.25);
+
+    h1{
+        position: absolute;
+        left: 16px;
+        top: 16px;
+
+        font-size: 32px;
+        font-weight: 400;
+        color: $brand-dark-blue;
+        margin-top: 0;
+    }
+
+    .card-grid{
+        position: absolute;
+        top: 80px;
+        left: 16px;
+        height: 430px;
+
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(auto-fit, 83px);
+        gap: 20px;
+        overflow-y: scroll;
+
+        .card{
+            position: relative;
+            width: 324px;
+            height: 83px;
+            background-color: $brand-dark-blue;
+            border-radius: 10px;
+
+            .circle{
+                position: absolute;
+                left: 16px;
+                top: 16px;
+
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                background-color: $brand-black;
+            }
+
+            .course-name{
+                position: absolute;
+                left: 80px;
+                top: 16px;
+                margin-top: 0;
+
+                font-size: 24px;
+                font-weight: 400;
+                color: $brand-white;
+            }
+
+            .date-time{
+                position: absolute;
+                left: 80px;
+                bottom: 12px;
+
+                h3{
+                    display: inline;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $brand-white;
+                }
+            }
+        }
+    }
+}
+
+.section-container {
+    display: grid;
+    grid-template-columns: 379px 820px;
+    grid-template-rows: 550px;
+    gap: 20px;
+
+    width: min-content;
+    margin-bottom: 20px;
+
+    position: relative;
+    top: 175px;
+    left: 128px;
+  }
+  
+  .section2 {
+    display: grid;
+    grid-template-rows: 250px 250px;
+    gap: 20px;
+  }
 
