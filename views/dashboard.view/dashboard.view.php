@@ -2,15 +2,19 @@
 require_once("rollcallDB.php");
 
 $user_data;
-$course_list;
+$courses_enrolled = array();
+$courses_instructed = array();
 $upcoming_courses = array();
+$arranged_courses = array();
 
 if($_POST["submit"] == "sign-in-submit"){
     $user_data = get_user($_POST["email"]);
-    $course_list = json_decode($user_data["courses"], true)["list"];
+    $courses_enrolled = json_decode($user_data["courses_enrolled"], true)["list"];
+    $courses_instructed = json_decode($user_data["courses_instructed"], true)["list"];
 
-    for($i = 0; $i < count($course_list); $i++){
-        $id = $course_list[$i];
+    // Get upcoming courses
+    for($i = 0; $i < count($courses_enrolled); $i++){
+        $id = $courses_enrolled[$i];
         $course = get_course($id);
         $schedule_list = json_decode($course["schedule"], true)["list"];
 
@@ -30,7 +34,14 @@ if($_POST["submit"] == "sign-in-submit"){
             }
         }
     }
-    //print_r($current_time);
+
+    // Arrange calendar courses
+    //$calendar_courses = array_merge($courses_instructed, $courses_enrolled);
+    for($i = 0; $i < count($courses_enrolled); $i++){
+        $id = $courses_enrolled[$i];
+        $course = get_course($id);
+        $schedule_list = json_decode($course["schedule"], true)["list"];
+    }
 }
 
 //print_r($user_data);
@@ -99,21 +110,75 @@ if($_POST["submit"] == "sign-in-submit"){
         </div>
     </section>
 
-    <section class="courses-section">
-        <h1>Your Courses</h1>
-        
-        <div class="card-grid">
-            <?php
-            $num_courses = count($course_list);
-            for ($i = 0; $i < $num_courses; $i++):
-                $course = get_course($course_list[$i]);
-            ?>
-                <div class="card">
-                    <div class="circle"></div>
-                    <h2 class="course-name"><?= $course["code"] ?></h2>
+
+    <div class="section-container">
+        <section class="calendar-section section1">
+            <h1><?= !empty($upcoming_courses) ? "Schedule" : "No schedule" ?></h1>
+
+            <div class="card-grid">
+                <?php
+                $num_courses = count($upcoming_courses);
+                for ($i = 0; $i < $num_courses; $i++):
+                    $course = $upcoming_courses[$i]["course"];
+                ?>
+                    <div class="card">
+                        <div class="circle"></div>
+                        <h2 class="course-name"><?= $course["code"] ?></h2>
+                        <div class="date-time">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_226_284)">
+                                <path d="M8 3.5C8 3.22386 7.77614 3 7.5 3C7.22386 3 7 3.22386 7 3.5V9C7 9.17943 7.09614 9.3451 7.25193 9.43412L10.7519 11.4341C10.9917 11.5711 11.2971 11.4878 11.4341 11.2481C11.5711 11.0083 11.4878 10.7029 11.2481 10.5659L8 8.70984V3.5Z" fill="white"/>
+                                <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_226_284">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <h3><?= $upcoming_courses[$i]["time"] ?></h3>
+                        </div>
+                    </div>
+                <?php endfor; ?>
+            </div>
+        </section>
+
+        <div class="section2">
+            <section class="courses-enrolled-section section2-1">
+                <h1><?= !empty($courses_enrolled) ? "Enrolled Courses" : "No enrolled Courses" ?></h1>
+
+                <div class="card-grid">
+                    <?php
+                    $num_courses = count($courses_enrolled);
+                    for ($i = 0; $i < $num_courses; $i++):
+                        $course = get_course($courses_enrolled[$i]);
+                    ?>
+                        <div class="card">
+                            <div class="circle"></div>
+                            <h2 class="course-name"><?= $course["code"] ?></h2>
+                        </div>
+                    <?php endfor; ?>
                 </div>
-            <?php endfor; ?>
+            </section>
+
+
+            <section class="courses-instructed-section section2-2">
+                <h1><?= !empty($courses_instructed) ? "Teaching Courses" : "No teaching Courses" ?></h1>
+
+                <div class="card-grid">
+                    <?php
+                    $num_courses = count($courses_instructed);
+                    for ($i = 0; $i < $num_courses; $i++):
+                        $course = get_course($courses_instructed[$i]);
+                    ?>
+                        <div class="card">
+                            <div class="circle"></div>
+                            <h2 class="course-name"><?= $course["code"] ?></h2>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
 
 </body>
