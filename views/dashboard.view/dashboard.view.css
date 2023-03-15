@@ -111,6 +111,19 @@ body {
   color: #0E71A7;
   margin-top: 0;
 }
+.courses-enrolled-section .plus-btn {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  background: transparent;
+  border: none;
+}
+.courses-enrolled-section .plus-btn:hover {
+  cursor: pointer;
+}
+.courses-enrolled-section .plus-btn:hover circle {
+  fill: #1DA1F2;
+}
 .courses-enrolled-section .card-grid {
   position: absolute;
   top: 80px;
@@ -128,6 +141,10 @@ body {
   height: 145px;
   background-color: #0E71A7;
   border-radius: 10px;
+}
+.courses-enrolled-section .card-grid .card:hover {
+  background-color: #1DA1F2;
+  cursor: pointer;
 }
 .courses-enrolled-section .card-grid .card .circle {
   position: absolute;
@@ -184,6 +201,10 @@ body {
   background-color: #0E71A7;
   border-radius: 10px;
 }
+.courses-instructed-section .card-grid .card:hover {
+  background-color: #1DA1F2;
+  cursor: pointer;
+}
 .courses-instructed-section .card-grid .card .circle {
   position: absolute;
   right: 16px;
@@ -221,11 +242,21 @@ body {
   color: #0E71A7;
   margin-top: 0;
 }
+.calendar-section .num_courses {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2E2E2E;
+  opacity: 0.7;
+  margin-top: 0;
+}
 .calendar-section .card-grid {
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 16px;
-  height: 430px;
+  height: 400px;
   display: grid;
   grid-auto-flow: row;
   grid-template-rows: repeat(auto-fit, 83px);
@@ -238,6 +269,10 @@ body {
   height: 83px;
   background-color: #0E71A7;
   border-radius: 10px;
+}
+.calendar-section .card-grid .card:hover {
+  background-color: #1DA1F2;
+  cursor: pointer;
 }
 .calendar-section .card-grid .card .circle {
   position: absolute;
@@ -274,7 +309,7 @@ body {
   display: grid;
   grid-template-columns: 379px 820px;
   grid-template-rows: 550px;
-  gap: 20px;
+  gap: 55px;
   width: min-content;
   margin-bottom: 20px;
   position: relative;
@@ -286,6 +321,101 @@ body {
   display: grid;
   grid-template-rows: 250px 250px;
   gap: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: calc((100vh - 250px) / 2);
+  left: calc((100vw - 500px) / 2);
+  z-index: 4;
+  width: 500px;
+  height: 320px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #1DA1F2;
+  overflow: hidden;
+}
+.modal .modal-title {
+  background-color: #0E71A7;
+}
+.modal .modal-title h1 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #FFF;
+  margin-top: 0;
+  text-align: center;
+  padding: 10px 0px;
+}
+.modal .modal-title #close-enroll-modal {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+}
+.modal .modal-title #close-enroll-modal:hover path {
+  fill: #1DA1F2;
+}
+.modal .modal-body {
+  position: absolute;
+  left: 5%;
+  width: 90%;
+}
+.modal .modal-body form {
+  width: 100%;
+}
+.modal .modal-body form .input-field {
+  height: 86px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 42px;
+  border-radius: 10px;
+  border: solid 1px rgba(46, 46, 46, 0.7);
+  background-color: #FFF;
+}
+.modal .modal-body form .input-field input {
+  width: 90%;
+  height: 90%;
+  margin-top: 1%;
+  font-size: 36px;
+  font-weight: 400;
+  color: #2E2E2E;
+  border: none;
+  background-color: transparent;
+}
+.modal .modal-body form .input-field input:focus {
+  border: none !important;
+  outline: none;
+}
+.modal .modal-body form .input-field input::placeholder {
+  opacity: 0.7;
+}
+.modal .modal-body form button {
+  height: 86px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFF;
+  background-color: #0E71A7;
+}
+.modal .modal-body form button:hover {
+  background-color: #1DA1F2;
+}
+
+.enroll-box {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2E2E2E;
+  opacity: 0.7;
+  display: none;
+  z-index: 3;
 }
 
 /*# sourceMappingURL=dashboard.view.css.map */

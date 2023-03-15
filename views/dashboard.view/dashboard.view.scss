@@ -147,6 +147,21 @@ body{
         margin-top: 0;
     }
 
+    .plus-btn{
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        background: transparent;
+        border: none;
+
+        &:hover {
+            circle{
+                fill: $brand-bright-blue;
+            }
+            cursor: pointer;
+        }
+    }
+
     .card-grid{
         position: absolute;
         top: 80px;
@@ -165,6 +180,11 @@ body{
             height: 145px;
             background-color: $brand-dark-blue;
             border-radius: 10px;
+
+            &:hover {
+                background-color: $brand-bright-blue;
+                cursor: pointer;
+            }
 
             .circle{
                 position: absolute;
@@ -234,6 +254,11 @@ body{
             background-color: $brand-dark-blue;
             border-radius: 10px;
 
+            &:hover {
+                background-color: $brand-bright-blue;
+                cursor: pointer;
+            }
+
             .circle{
                 position: absolute;
                 right: 16px;
@@ -283,11 +308,23 @@ body{
         margin-top: 0;
     }
 
+    .num_courses {
+        position: absolute;
+        left: 16px;
+        top: 60px;
+
+        font-size: 16px;
+        font-weight: 400;
+        color: $brand-black;
+        opacity: 0.7;
+        margin-top: 0;
+    }
+
     .card-grid{
         position: absolute;
-        top: 80px;
+        top: 100px;
         left: 16px;
-        height: 430px;
+        height: 400px;
 
         display: grid;
         grid-auto-flow: row;
@@ -301,6 +338,11 @@ body{
             height: 83px;
             background-color: $brand-dark-blue;
             border-radius: 10px;
+
+            &:hover {
+                background-color: $brand-bright-blue;
+                cursor: pointer;
+            }
 
             .circle{
                 position: absolute;
@@ -346,7 +388,7 @@ body{
     display: grid;
     grid-template-columns: 379px 820px;
     grid-template-rows: 550px;
-    gap: 20px;
+    gap: 55px;
 
     width: min-content;
     margin-bottom: 20px;
@@ -354,11 +396,124 @@ body{
     position: relative;
     top: 175px;
     left: 128px;
-  }
+}
   
-  .section2 {
+.section2 {
     display: grid;
     grid-template-rows: 250px 250px;
     gap: 20px;
-  }
+}
 
+.modal {
+    position: fixed;
+    top: calc((100vh - 250px)/2);
+    left: calc((100vw - 500px)/2);
+    z-index: 4;
+
+    width: 500px;
+    height: 320px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid $brand-bright-blue;
+    overflow: hidden;
+
+    .modal-title {
+        background-color: $brand-dark-blue;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 400;
+            color: $brand-white;
+
+            margin-top: 0;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        #close-enroll-modal{
+            position: absolute;
+            right: 16px;
+            top: 20px;
+
+            &:hover {
+                path{fill: $brand-bright-blue}
+            }
+        }
+    }
+
+    .modal-body{
+        position: absolute;
+        left: 5%;
+        width: 90%;
+
+        form{
+            width: 100%;
+
+            .input-field{
+                height: 86px;
+                width: 100%;
+                text-align: center;
+    
+                margin-bottom: 42px;
+                border-radius: 10px;
+                border: solid 1px rgba(46, 46, 46, 0.7);
+                background-color: $brand-white;
+    
+                input{
+                    width: 90%;
+                    height: 90%;
+                    margin-top: 1%;
+    
+                    font-size: 36px;
+                    font-weight: 400;
+                    color: $brand-black;
+    
+                    border: none;
+                    background-color: transparent;
+    
+                    &:focus{
+                        border: none !important;
+                        outline: none;
+                    }
+    
+                    &::placeholder{
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            button{
+                height: 86px;
+                width: 100%;
+                border: none;
+                border-radius: 10px;
+    
+                font-size: 36px;
+                font-weight: 700;
+                color: $brand-white;
+                background-color: $brand-dark-blue;
+    
+                &:hover {
+                    background-color: $brand-bright-blue;
+                }
+            }
+        }
+    }
+}
+
+.enroll-box{
+    display: none;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brand-black;
+    opacity: 0.7;
+    display: none;
+    z-index: 3;
+}
+  

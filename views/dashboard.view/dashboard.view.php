@@ -114,6 +114,7 @@ if($_POST["submit"] == "sign-in-submit"){
     <div class="section-container">
         <section class="calendar-section section1">
             <h1><?= !empty($upcoming_courses) ? "Schedule" : "No schedule" ?></h1>
+            <h2 class="num_courses"><?= !empty($upcoming_courses) ? count($upcoming_courses)." events today" : "No events today" ?></h2>
 
             <div class="card-grid">
                 <?php
@@ -146,6 +147,20 @@ if($_POST["submit"] == "sign-in-submit"){
         <div class="section2">
             <section class="courses-enrolled-section section2-1">
                 <h1><?= !empty($courses_enrolled) ? "Enrolled Courses" : "No enrolled Courses" ?></h1>
+
+                <button class="plus-btn" type="button" title="Add Course" id="enroll-btn">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="#0E71A7"/>
+                        <g clip-path="url(#clip0_289_252)">
+                        <path d="M30 14C31.1046 14 32 14.8954 32 16V28H44C45.1046 28 46 28.8954 46 30C46 31.1046 45.1046 32 44 32H32V44C32 45.1046 31.1046 46 30 46C28.8954 46 28 45.1046 28 44V32H16C14.8954 32 14 31.1046 14 30C14 28.8954 14.8954 28 16 28H28V16C28 14.8954 28.8954 14 30 14Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_289_252">
+                        <rect width="32" height="32" fill="white" transform="translate(14 14)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
 
                 <div class="card-grid">
                     <?php
@@ -181,4 +196,26 @@ if($_POST["submit"] == "sign-in-submit"){
         </div>
     </div>
 
+    <div class="modal enroll-box">
+        <div class="modal-title">
+            <h1>Enroll for a course</h1>
+            <svg id="close-enroll-modal" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.585789 0.585789C1.36684 -0.195263 2.63316 -0.195263 3.4142 0.585789L14 11.1716L24.5858 0.585789C25.3668 -0.195263 26.6332 -0.195263 27.4142 0.585789C28.1953 1.36684 28.1953 2.63316 27.4142 3.4142L16.8284 14L27.4142 24.5858C28.1953 25.3668 28.1953 26.6332 27.4142 27.4142C26.6332 28.1953 25.3668 28.1953 24.5858 27.4142L14 16.8284L3.4142 27.4142C2.63316 28.1953 1.36684 28.1953 0.585789 27.4142C-0.195263 26.6332 -0.195263 25.3668 0.585789 24.5858L11.1716 14L0.585789 3.4142C-0.195263 2.63316 -0.195263 1.36684 0.585789 0.585789Z" fill="white"/>
+            </svg>
+        </div>
+
+        <div class="modal-body">
+            <form action="/dashboard"  method="POST">
+                <div class="input-field">
+                    <input type="text" name="course_id" placeholder="Course ID" required>
+                </div>
+                <button type="submit" name="submit" value="course-id-submit">Enroll</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
 </body>
+
+<script src="views/dashboard.view/dashboard.view.js"></script>
