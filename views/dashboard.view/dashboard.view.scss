@@ -31,7 +31,7 @@ body{
     .brand-name{
         position: absolute;
         top: 20px;
-        left: 44.84%;
+        left: calc(41.4% + 100px);
         display: inline;
 
         font-size: 48px;
@@ -516,4 +516,3 @@ body{
     display: none;
     z-index: 3;
 }
-  
