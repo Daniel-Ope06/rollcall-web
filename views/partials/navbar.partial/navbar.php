@@ -43,8 +43,10 @@
   </button>
 
   <div class="navbar-collapse">
+    <!--
     <a href="/" class="navbar-item item-1"><h2>Features</h2></a>
     <a href="/" class="navbar-item item-2"><h2>Resources</h2></a>
+    -->
     <a href="/sign-in" class="navbar-item item-3"><h2>Log in</h2></a>
     <a href="/sign-up" class="navbar-item item-4"><h2>Get RollCall for free</h2></a>
   </div>
