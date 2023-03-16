@@ -43,9 +43,6 @@ if($_POST["submit"] == "sign-in-submit"){
         $schedule_list = json_decode($course["schedule"], true)["list"];
     }
 }
-
-//print_r($user_data);
-//print_r($course_list);
 ?>
 
 <head>
@@ -148,6 +145,7 @@ if($_POST["submit"] == "sign-in-submit"){
             <section class="courses-enrolled-section section2-1">
                 <h1><?= !empty($courses_enrolled) ? "Enrolled Courses" : "No enrolled Courses" ?></h1>
 
+                <!--
                 <button class="plus-btn" type="button" title="Add Course" id="enroll-btn">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="30" cy="30" r="30" fill="#0E71A7"/>
@@ -161,6 +159,7 @@ if($_POST["submit"] == "sign-in-submit"){
                         </defs>
                     </svg>
                 </button>
+                -->
 
                 <div class="card-grid">
                     <?php
@@ -196,6 +195,7 @@ if($_POST["submit"] == "sign-in-submit"){
         </div>
     </div>
 
+    <!--
     <div class="modal enroll-box">
         <div class="modal-title">
             <h1>Enroll for a course</h1>
@@ -215,6 +215,7 @@ if($_POST["submit"] == "sign-in-submit"){
     </div>
 
     <div id="overlay"></div>
+    -->
 
 </body>
 

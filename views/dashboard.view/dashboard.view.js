@@ -1,3 +1,4 @@
+/*
 var enroll_button = document.getElementById("enroll-btn");
 var close_enroll_button = document.getElementById("close-enroll-modal");
 var enroll_box = document.querySelector(".enroll-box");
@@ -15,4 +16,4 @@ close_enroll_button.addEventListener("click", function() {
     overlay.style.display = "none";
 });
 
-
+*/
